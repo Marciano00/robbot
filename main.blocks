@@ -1,0 +1,7 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="device_forever" id="0Bu7+}S89~#}lzIoyh2{" x="0" y="0"/><block type="pxt-on-start" id="])w7YneiPI:R|zagkId$" x="-153" y="230"><statement name="HANDLER"><block type="device_print_message" id=",X3!q30f=Z|E:ytGvpxe"><value name="text"><shadow type="text" id="+Y}s7S|rj/Zd~Y|dQON$"><field name="TEXT">BB TROCHIN</field></shadow></value><next><block type="device_pause" id="IuRK#i_?Ghk]D$UgJJ^y"><value name="pause"><shadow type="timePicker" id="{YX$?7_H)4xs[yx8W1ot"><field name="ms">1000</field></shadow></value><next><block type="device_show_leds" id="h^~%{or2=XV?%b~%[i{h"><field name="LEDS">`
+        . . . . . 
+        # # . # # 
+        . . # . . 
+        # . . . # 
+        . # # # .
+        `</field></block></next></block></next></block></statement></block></xml>
