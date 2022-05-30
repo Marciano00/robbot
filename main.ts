@@ -1,75 +1,29 @@
 input.onButtonPressed(Button.A, function () {
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
-    basic.pause(100)
-    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 255)
-    basic.pause(100)
-    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 255)
-    basic.pause(100)
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 255)
+    for (let index = 0; index < 300; index++) {
+        music.playTone(988, music.beat(BeatFraction.Whole))
+        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+        music.playTone(880, music.beat(BeatFraction.Whole))
+        strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
+    }
 })
 input.onButtonPressed(Button.B, function () {
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
-    basic.pause(100)
-    maqueen.servoRun(maqueen.Servos.S1, 86)
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
-    basic.pause(100)
-    maqueen.servoRun(maqueen.Servos.S1, 86)
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
-    basic.pause(100)
-    maqueen.servoRun(maqueen.Servos.S1, 86)
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
+    for (let index = 0; index < 300; index++) {
+        music.playTone(659, music.beat(BeatFraction.Whole))
+        strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+        music.playTone(880, music.beat(BeatFraction.Whole))
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    }
 })
+let strip: neopixel.Strip = null
+strip = neopixel.create(DigitalPin.P15, 4, NeoPixelMode.RGB)
 basic.showString("BB TROCHIN")
 basic.pause(1000)
-basic.showLeds(`
-    . . . . .
-    # # . # #
-    . . # . .
-    # . . . #
-    . # # # .
-    `)
 basic.forever(function () {
-    music.playTone(330, music.beat(BeatFraction.Whole))
-    music.playTone(659, music.beat(BeatFraction.Whole))
-    music.playTone(587, music.beat(BeatFraction.Double))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
-    music.playTone(262, music.beat(BeatFraction.Whole))
+    basic.showLeds(`
+        . . . . .
+        # # . # #
+        . . # . .
+        # . . . #
+        . # # # .
+        `)
 })
